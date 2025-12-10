@@ -6,10 +6,10 @@ on:
 env:
   MICROPYTHON: micropython
   MICROPYTHON_REPO: https://github.com/micropython/micropython.git
-  MICROPYTHON_VERSION: v1.26.1
+  MICROPYTHON_VERSION: v1.27.0
   ESPIDF: esp-idf
   ESPIDF_REPO: https://github.com/espressif/esp-idf.git
-  ESPIDF_VERSION: v5.4.2
+  ESPIDF_VERSION: v5.5.1
   TZ: Asia/Shanghai
 
 jobs:
