@@ -19,6 +19,7 @@ jobs:
         info:
           - '{ "BOARD": "ESP32_GENERIC",     "BOARD_VARIANT": "SPIRAM",      "FLASH": "4",   "DISPLAY": "st7735",  "INDEV":"" }'
           - '{ "BOARD": "ESP32_GENERIC_S3",  "BOARD_VARIANT": "SPIRAM_OCT",  "FLASH": "8",   "DISPLAY": "hx8369",  "INDEV":"gt911" }'
+          - '{ "BOARD": "ESP32_GENERIC_S3",  "BOARD_VARIANT": "SPIRAM_OCT",  "FLASH": "8",   "DISPLAY": "ili9341", "INDEV":"ft6x36" }'
           - '{ "BOARD": "ESP32_GENERIC_S3",  "BOARD_VARIANT": "SPIRAM_OCT",  "FLASH": "16",  "DISPLAY": "gc9a01",  "INDEV":"" }'
     
     steps:
