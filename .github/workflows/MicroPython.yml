@@ -64,6 +64,9 @@ jobs:
           wget -P ${{env.MICROPYTHON}}/ports/esp32/modules https://raw.githubusercontent.com/micropython/micropython-lib/master/micropython/drivers/storage/sdcard/sdcard.py
           rm -rf ${{env.MICROPYTHON}}/ports/esp32/boards/${{fromJSON(matrix.info).BOARD}}/sdkconfig.board
           mv config/micropython/N${{fromJSON(matrix.info).FLASH}}.sdkconfig ${{env.MICROPYTHON}}/ports/esp32/boards/${{fromJSON(matrix.info).BOARD}}/sdkconfig.board
+          if [[ "${{fromJSON(matrix.info).BOARD}}" == "ESP32_GENERIC_S3" ]] && [[ "${{fromJSON(matrix.info).BOARD_VARIAN}}" == "SPIRAM" ]]; then
+            cp config/micropython/mpconfigvariant_SPIRAM.cmake ${{env.MICROPYTHON}}/ports/esp32/boards/${{fromJSON(matrix.info).BOARD}}/mpconfigvariant_SPIRAM.cmake
+          fi
 
       - name: Compile the firmware
         id: compile
